@@ -13,6 +13,12 @@
             <div id="bg"></div>
         </div>
         <div id="filter"></div>
+        <div id="block">
+            <img id="blImg" src="./assets/png/controller.png">
+            <div class="title" style="align-items: start; justify-content: center;">
+                MOVE ANY STICK TO CONTINUE
+            </div>
+        </div>
     </div>
     <div id="app">
         <div id="inMain" class="mainBox">
@@ -20,13 +26,30 @@
                 <img src="./assets/png/controller.png" height="100%">
                 Input
             </div>
-            <div id="inBox">
+            <div id="inBox" class="canvasBox">
                 <canvas id="inCanvas1" class="canvas"></canvas>
                 <canvas id="inCanvas2" class="canvas"></canvas>
             </div>
         </div>
-        <div id="outMain" class="mainBox"></div>
-        <div id="botMain" class="mainBox"></div>
+        <div id="outMain" class="mainBox">
+            <div id="inTitle" class="title">
+                <img src="./assets/png/arrows.png" height="100%">
+                Movement
+            </div>
+            <div id="outBox" class="canvasBox">
+                <canvas id="outCanvas1" class="canvas"></canvas>
+                <canvas id="outCanvas2" class="canvas"></canvas>
+            </div>
+        </div>
+        <div id="botMain" class="mainBox">
+            <div id="inTitle" class="title">
+                <img src="./assets/png/gears.png" height="100%">
+                Robot
+            </div>
+            <div id="botBox">
+                <canvas id="botCanvas" class="canvas"></canvas>
+            </div>
+        </div>
     </div>
 </body>
 </html>

@@ -6,8 +6,12 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
+    min-width: 1200px;
+    min-height: 600px;
+
     margin: 0;
     overflow: hidden;
+
     background-color: #6d2ff8;
 }
 
@@ -42,6 +46,28 @@ body {
     backdrop-filter: blur(500px);
 }
 
+#block {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    padding: 8% 25%;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr 1fr;
+
+    background: #0000007f;
+    z-index: -10/*10*/;
+}
+
+#blImg {
+    max-height: 60vh;
+    width: auto;
+    justify-self: center;
+}
+
 #app {
     position: absolute;
     width: 100%;
@@ -66,13 +92,24 @@ body {
     grid-row: 2 span;
 }
 
-#inBox {
+.canvasBox {
+    position: relative;
     width: 100%;
     height: 100%;
+    max-height: 100%; 
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
+}
+
+#botBox {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .mainBox {
@@ -104,8 +141,10 @@ body {
 }
 
 .canvas {
-    width: calc(100% - var(--spacing));
+    height: calc(100% - var(--spacing));
     aspect-ratio: 1;
+    max-width: 100%;
+    max-height: 100%;
     justify-self: center;
     align-self: center;
 }
